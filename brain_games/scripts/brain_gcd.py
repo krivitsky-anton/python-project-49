@@ -1,11 +1,10 @@
 import prompt
 import random
+import math
 
 
-def is_even(num: int):
-    if num % 2 == 0:
-        return 'yes'
-    return 'no'
+def get_gcd(num1: int, num2: int):
+    return (num1 * num2) // math.gcd(num1, num2)
 
 
 wins = 0
@@ -13,11 +12,12 @@ print('Welcome to the Brain Games!')
 user_name = prompt.string('May I have your name? ')
 print(f'Hello, {user_name}!')
 
-print('Answer \"yes\" if the number is even, otherwise answer \"no\".')
+print('Find the greatest common divisor of given numbers.')
 while wins < 3:
-    number = random.randint(1, 100)
-    correct_answer = is_even(number)
-    user_answer = prompt.string(f'Question: {number} ')
+    number1 = random.randint(1, 10)
+    number2 = random.randint(1, 10)
+    correct_answer = get_gcd(number1, number2)
+    user_answer = int(prompt.string(f'Question: {number1} {number2} '))
     if user_answer == correct_answer:
         print('Correct!')
         wins += 1

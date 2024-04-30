@@ -15,8 +15,8 @@ def mult(num1: int, num2: int):
 
 
 def game_round():
-    number1 = random.randint(1, 4)
-    number2 = random.randint(1, 4)
+    number1 = random.randint(1, 25)
+    number2 = random.randint(1, 25)
     operation = random.randint(1, 3)
     if operation == 1:
         correct_answer = add(number1, number2)
