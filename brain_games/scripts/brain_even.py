@@ -13,10 +13,11 @@ def is_even(num: int):
 
 
 wins = 0
-
-print('Answer \"yes\" if the number is even, otherwise answer \"no\".')
+print('Welcome to the Brain Games!')
 user_name = prompt.string('May I have your name? ')
 print(f'Hello, {user_name}!')
+
+print('Answer \"yes\" if the number is even, otherwise answer \"no\".')
 while wins < 3:
     number = get_random_number()
     correct_answer = is_even(number)
